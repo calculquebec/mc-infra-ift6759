@@ -22,6 +22,6 @@ jupyterhub::jupyterhub_config_hash:
 
 
 jupyterhub::enable_otp_auth: false
-profile::cvmfs::client::lmod_default_modules: ['StdEnv/2020']
+profile::cvmfs::client::lmod_default_modules: ['StdEnv/2020', 'gcc/9.3.0', 'cuda/11.4']
 
 #jupyterhub::kernel::venv::packages: ['numpy', 'pandas', 'matplotlib']
