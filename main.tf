@@ -6,7 +6,7 @@ variable "password" {}
 variable "email" {}
 
 module "openstack" {
-  source         = "git::https://github.com/ComputeCanada/magic_castle.git//openstack?ref=11.7"
+  source         = "git::https://github.com/ComputeCanada/magic_castle.git//openstack?ref=11.7.1"
   config_git_url = "https://github.com/ComputeCanada/puppet-magic_castle.git"
   config_version = "11.7"
 
@@ -53,7 +53,7 @@ output "public_ip" {
 
 ## Uncomment to register your domain name with CloudFlare
 module "dns" {
-  source           = "git::https://github.com/ComputeCanada/magic_castle.git//dns/cloudflare?ref=11.7"
+  source           = "git::https://github.com/ComputeCanada/magic_castle.git//dns/cloudflare?ref=11.7.1"
   email            = var.email
   name             = module.openstack.cluster_name
   domain           = module.openstack.domain
